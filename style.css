@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
   background: #333;
   color: #000000;
   line-height: 1.6;
@@ -63,43 +63,53 @@ body {
   /* css smooth scroll*/
 }
 
-.navbar {
+nav {
   position: fixed;
   top: 0;
   z-index: 1;
-  display: flex;
   width: 100%;
-  height: 60px;
+  height: 10vh;
   background: #f58220;
 }
 
-.navbar ul {
+.nav-links {
   display: flex;
   list-style: none;
   width: 100%;
   justify-content: center;
+  list-style: none;
+  width: 50%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
 }
-.navbar .logo {
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+nav .logo {
   position: left;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  margin-left: 15px;
+  width: 4vw;
+  height: 4vw;
+  margin-left: auto;
+  align-content: center;
 }
 
-.navbar ul li {
-  margin: 0 1rem;
-  padding: 1rem;
+.w3-card-4 w3-dark-grey {
+  display: none;
 }
-
-.navbar ul li a {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #000;
+.w3-left,
+.w3-right,
+.w3-badge {
+  cursor: pointer;
 }
-
-.navbar ul li a:hover {
-  color: skyblue;
+.w3-badge {
+  height: 13px;
+  width: 13px;
+  padding: 0;
 }
 
 section {
@@ -110,13 +120,13 @@ section {
   text-align: center;
   padding: 50px;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   scroll-snap-align: center;
 }
 
 section h1 {
-  font-size: 6rem;
-  text-align: match-parent;
+  margin: 100px;
+  font-size: 7vw;
   color: aliceblue;
 }
 section h2 {
@@ -149,4 +159,234 @@ section#profiles {
 
 section#teachers {
   background: lightgray;
+}
+
+@media screen and (max-width: 768px) {
+  .line {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+  }
+
+  nav {
+    position: relative;
+  }
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+  }
+  .nav-links {
+    position: fixed;
+    background: #f58220;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(100px at 90% -10%);
+    -webkit-clip-path: circle(100px at 90% -10%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+  }
+
+  .nav-links.open {
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%);
+    pointer-events: all;
+  }
+  .section {
+    flex-direction: column;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .nav-links li a {
+    font-size: 25px;
+  }
+
+  .nav-links li:nth-child(1) {
+    transition: all 0.5s ease 0.1s;
+  }
+  .nav-links li:nth-child(2) {
+    transition: all 0.5s ease 0.2s;
+  }
+  .nav-links li:nth-child(3) {
+    transition: all 0.5s ease 0.3s;
+  }
+  .nav-links li:nth-child(4) {
+    transition: all 0.5s ease 0.4s;
+  }
+  .nav-links li:nth-child(5) {
+    transition: all 0.5s ease 0.6s;
+  }
+  li.fade {
+    opacity: 1;
+  }
+}
+/* slide cards */
+
+.card-container {
+  margin: 0 auto;
+  margin-top: 20px;
+  position: relative;
+  width: 70%;
+  height: 0;
+  padding-bottom: 38%;
+  user-select: none;
+  background-color: #1c1c1c;
+  border: solid 10px #616161;
+  border-radius: 10px;
+}
+
+.card-container .slide-card {
+  display: inherit;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.card-container .slide-card img,
+h5,
+span {
+  width: inherit;
+  height: inherit;
+}
+
+.prev,
+.next {
+  width: 12%;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  background-color: rgba(88, 88, 88, 0.2);
+  color: rgba(244, 244, 244, 0.9);
+  z-index: 99;
+  transition: 0.45s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.next {
+  right: 0;
+}
+.prev {
+  left: 0;
+}
+
+label span {
+  position: absolute;
+  font-size: 100pt;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev:hover,
+.next:hover {
+  transition: 0.3s;
+  background-color: rgba(88, 88, 89, 0.8);
+  color: #ffffff;
+}
+
+.card-container #nav_slide {
+  width: 100%;
+  bottom: 12%;
+  height: 11px;
+  position: absolute;
+  text-align: center;
+  z-index: 99;
+  cursor: default;
+}
+img {
+  position: relative;
+  float: inline-start;
+  max-width: 450px;
+  max-height: 300px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#nav_slide .dots {
+  top: -4vh;
+  width: 18px;
+  height: 18px;
+  margin: 0 4px;
+  position: relative;
+  border-radius: 100%;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: 0.4s;
+}
+
+#nav_slide .dots:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: 0.25s;
+}
+
+.slide-card {
+  z-index: -1;
+}
+
+#c1:checked ~ #m1,
+#c2:checked ~ #m2,
+#c3:checked ~ #m3,
+#c4:checked ~ #m4,
+#c5:checked ~ #m5,
+#c6:checked ~ #m6,
+#c7:checked ~ #m7,
+#c8:checked ~ #m8 {
+  z-index: 9;
+  animation: scroll 1s ease-in-out;
+}
+
+#c1:checked ~ #nav_slide #dot1,
+#c2:checked ~ #nav_slide #dot2,
+#c3:checked ~ #nav_slide #dot3,
+#c4:checked ~ #nav_slide #dot4,
+#c5:checked ~ #nav_slide #dot5,
+#c6:checked ~ #nav_slide #dot6,
+#c7:checked ~ #nav_slide #dot7,
+#c8:checked ~ #nav_slide #dot8 {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 685px) {
+  .card-container {
+    border: none;
+    width: 100%;
+    height: 0;
+    padding-bottom: 55%;
+  }
+
+  label span {
+    font-size: 50pt;
+  }
+
+  .prev,
+  .next {
+    width: 15%;
+  }
+  #nav_slide .dots {
+    width: 12px;
+    height: 12px;
+  }
+}
+@media screen and(min-width: 970px) {
+  .me {
+    display: none;
+  }
 }

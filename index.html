@@ -4,21 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
     <title>MTI Landing Page</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   </head>
   <body>
     <div class="container">
-      <nav class="navbar">
-        <a href="#home">
-          <img class="logo" src="./imgs/logotec.png" />
-        </a>
-        <ul>
+      <nav>
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <ul class="nav-links">
           <li><a href="#home">Inicio</a></li>
-          <li><a href="#desc">Descripción</a></li>
-          <li><a href="#syllabus">Plan de Estudios</a></li>
+          <li><a href="#desc">MTI</a></li>
+          <li><a href="#syllabus">Retícula</a></li>
           <li><a href="#profiles">Perfiles</a></li>
-          <li><a href="#teachers">Docentes</a></li>
+          <li><a href="#teachers">Catedráticos</a></li>
+          <li>
+            <a href="#home" class="logo">
+              <img class="logo" src="./imgs/logotec.png" />
+            </a>
+          </li>
         </ul>
       </nav>
       <section id="home">
@@ -90,8 +99,8 @@
           innovación.
         </span>
       </section>
-      <section id="teachers">
-        <h2>Docentes</h2>
+      <section id="academic">
+        <h2>Núcleo Académico</h2>
         <span>
           El Núcleo Académico Básico (NAB) de la Maestría en Tecnologías de la
           Información (MTI) está constituido por ocho profesores de tiempo
@@ -99,18 +108,179 @@
           Tecnológico de Tepic), encargados y responsables del desarrollo y
           seguimiento del programa debido al interés común en el área de TI.
         </span>
+      </section>
+
+      <section id="teachers">
         <h2>Catedráticos</h2>
-        <ul>
-          <li>M.C. Miguel Ángel Macías Díaz</li>
-          <li>M.C. José de Jesús Ceballos Mejía</li>
-          <li>Dr. Marco Antonio Chávez Arcega</li>
-          <li>M.C. Israel Arjona Vizcaíno</li>
-          <li>MSC. Gerardo Olivares Vargas</li>
-          <li>MSC. Efraín Moreno García</li>
-          <li>M.C. Jorge Saúl Montes Cáceres</li>
-          <li>Dr. C. Guillermo Rodríguez Briseño</li>
-        </ul>
+        <div class="card-container">
+          <input type="radio" id="c1" name="cards" checked />
+          <input type="radio" id="c2" name="cards" />
+          <input type="radio" id="c3" name="cards" />
+          <input type="radio" id="c4" name="cards" />
+          <input type="radio" id="c5" name="cards" />
+          <input type="radio" id="c6" name="cards" />
+          <input type="radio" id="c7" name="cards" />
+          <input type="radio" id="c8" name="cards" />
+
+          <div class="slide-card" id="m1">
+            <div class="w3-card-4 w3-dark-grey">
+              <div class="w3-container w3-center">
+                <h3>Docente</h3>
+                <img src="./imgs/adult-beach-casual-736716.jpg" alt="Avatar" />
+                <h5>Miguel Ángel Macías Díaz</h5>
+                <span
+                  >M.C. por la Universidad de Jalisco cuenta con amplia
+                  experiencia</span
+                >
+              </div>
+              <label class="prev" for="c8"><span>&#x2039;</span></label>
+              <label class="next" for="c2"><span>&#x203a;</span></label>
+            </div>
+          </div>
+
+          <div class="slide-card" id="m2">
+            <div class="w3-card-4 w3-dark-grey">
+              <div class="w3-container w3-center">
+                <h3>Docente</h3>
+                <img src="./imgs/adult-boy-casual-220453.jpg" alt="Avatar" />
+                <h5>José de Jesús Ceballos Mejía</h5>
+                <span
+                  >M.C. por la Universidad de Jalisco cuenta con amplia
+                  experiencia</span
+                >
+              </div>
+              <label class="prev" for="c1"><span>&#x2039;</span></label>
+              <label class="next" for="c3"><span>&#x203a;</span></label>
+            </div>
+          </div>
+
+          <div class="slide-card" id="m3">
+            <div class="w3-card-4 w3-dark-grey">
+              <div class="w3-container w3-center">
+                <h3>Docente</h3>
+                <img
+                  src="./imgs/bench-cup-facial-expression-374044.jpg"
+                  alt="Avatar"
+                />
+                <h5>Marco Antonio Chávez Arcega</h5>
+                <span
+                  >Dr. por la Universidad de Jalisco cuenta con amplia
+                  experiencia</span
+                >
+              </div>
+              <label class="prev" for="c2"><span>&#x2039;</span></label>
+              <label class="next" for="c4"><span>&#x203a;</span></label>
+            </div>
+          </div>
+
+          <div class="slide-card" id="m4">
+            <div class="w3-card-4 w3-dark-grey">
+              <div class="w3-container w3-center">
+                <h3>Docente</h3>
+                <img
+                  src="./imgs/business-discussion-indoors-2173508.jpg"
+                  alt="Avatar"
+                />
+                <h5>Israel Arjona Vizcaíno</h5>
+                <span
+                  >M.C. por la Universidad de Jalisco cuenta con amplia
+                  experiencia</span
+                >
+              </div>
+              <label class="prev" for="c3"><span>&#x2039;</span></label>
+              <label class="next" for="c5"><span>&#x203a;</span></label>
+            </div>
+          </div>
+
+          <div class="slide-card" id="m5">
+            <div class="w3-card-4 w3-dark-grey">
+              <div class="w3-container w3-center">
+                <h3>Docente</h3>
+                <img
+                  src="./imgs/casual-denim-jacket-eyes-1384219.jpg"
+                  alt="Avatar"
+                />
+                <h5>Gerardo Olivares Vargas</h5>
+                <span
+                  >M.S.C. por la Universidad de Jalisco cuenta con amplia
+                  experiencia</span
+                >
+              </div>
+              <label class="prev" for="c4"><span>&#x2039;</span></label>
+              <label class="next" for="c6"><span>&#x203a;</span></label>
+            </div>
+          </div>
+
+          <div class="slide-card" id="m6">
+            <div class="w3-card-4 w3-dark-grey">
+              <div class="w3-container w3-center">
+                <h3>Docente</h3>
+                <img
+                  src="./imgs/casual-fashion-fine-looking-594610.jpg"
+                  alt="Avatar"
+                />
+                <h5>Efraín Moreno García</h5>
+                <span
+                  >M.S.C. por la Universidad de Jalisco cuenta con amplia
+                  experiencia</span
+                >
+              </div>
+              <label class="prev" for="c5"><span>&#x2039;</span></label>
+              <label class="next" for="c7"><span>&#x203a;</span></label>
+            </div>
+          </div>
+
+          <div class="slide-card" id="m7">
+            <div class="w3-card-4 w3-dark-grey">
+              <div class="w3-container w3-center">
+                <h3>Docente</h3>
+                <img
+                  src="./imgs/collared-shirt-handsome-indoors-936229.jpg"
+                  alt="Avatar"
+                />
+                <h5>Jorge Saúl Montes Cáceres</h5>
+                <span
+                  >M.C. por la Universidad de Jalisco cuenta con amplia
+                  experiencia</span
+                >
+              </div>
+              <label class="prev" for="c6"><span>&#x2039;</span></label>
+              <label class="next" for="c8"><span>&#x203a;</span></label>
+            </div>
+          </div>
+
+          <div class="slide-card" id="m8">
+            <div class="w3-card-4 w3-dark-grey">
+              <div class="w3-container w3-center">
+                <h3>Docente</h3>
+                <img
+                  src="./imgs/facial-hair-fine-looking-guy-614810.jpg"
+                  alt="Avatar"
+                />
+                <h5>C. Guillermo Rodríguez Briseño</h5>
+                <span
+                  >Dr. por la Universidad de Jalisco cuenta con amplia
+                  experiencia</span
+                >
+              </div>
+              <label class="prev" for="c7"><span>&#x2039;</span></label>
+              <label class="next" for="c1"><span>&#x203a;</span></label>
+            </div>
+          </div>
+        </div>
+
+        <div id="nav_slide">
+          <label for="c1" class="dots" id="dot1"></label>
+          <label for="c2" class="dots" id="dot2"></label>
+          <label for="c3" class="dots" id="dot3"></label>
+          <label for="c4" class="dots" id="dot4"></label>
+          <label for="c5" class="dots" id="dot5"></label>
+          <label for="c6" class="dots" id="dot6"></label>
+          <label for="c7" class="dots" id="dot7"></label>
+          <label for="c8" class="dots" id="dot8"></label>
+        </div>
       </section>
     </div>
+    <script src="main.js"></script>
   </body>
 </html>
