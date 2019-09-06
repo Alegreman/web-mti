@@ -21,8 +21,8 @@ body {
   text-align: center;
   font-size: 28px;
   padding: 20px;
-  width: 200px;
-  transition: all 0.5s;
+  width: 300px;
+  transition: all 0.2s;
   cursor: pointer;
   margin: 5px;
 }
@@ -59,10 +59,8 @@ body {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   text-align: start;
-
-  /* css smooth scroll*/
 }
-
+/* css smooth scroll*/
 nav {
   position: fixed;
   top: 0;
@@ -123,7 +121,21 @@ section {
   height: 90vh;
   scroll-snap-align: center;
 }
-
+section p {
+  font-size: 16px;
+  align-items: left;
+  text-align: left;
+  padding: 5px;
+}
+section ul {
+  display: block;
+  list-style-type: disc;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+}
 section h1 {
   margin: 100px;
   font-size: 7vw;
@@ -133,10 +145,6 @@ section h2 {
   font-size: 6rem;
   text-align: match-parent;
   color: #000;
-}
-
-section p {
-  font-size: 1.5rem;
 }
 
 /* Section Images */
@@ -151,6 +159,40 @@ section#desc {
 
 section#syllabus {
   background: lightgray;
+}
+
+/* profiles flex box*/
+
+.card {
+  background-color: #ce9c6f;
+  padding: 10px;
+  border-radius: 5px;
+  min-height: 300px;
+  margin: 13px;
+  font-family: sans-serif;
+  align-items: baseline;
+}
+
+.img {
+  border-radius: 50%;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.column {
+  flex: 1;
+}
+.details-container {
+  flex: 2;
+  font-size: 16px;
+  align-content: center;
+}
+
+.avatar-container {
+  flex: 1;
+  flex-basis: 250px;
+  position: initial;
 }
 
 section#profiles {
@@ -381,12 +423,6 @@ table {
   .me {
     display: none;
   }
-}
-
-.t2,
-.t3,
-.t4 {
-  display: none;
 }
 
 /* slide cards teachers*/
