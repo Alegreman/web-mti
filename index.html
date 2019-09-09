@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <title>MTI Landing Page</title>
+    <title>MTI Page</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   </head>
   <body>
     <div class="container">
-      <nav>
+      <nav id="navbar">
         <div class="hamburger">
           <div class="line"></div>
           <div class="line"></div>
@@ -24,7 +24,7 @@
           <li><a href="#profiles">Perfiles</a></li>
           <li><a href="#teachers">Catedráticos</a></li>
           <li>
-            <a href="#home" class="logo">
+            <a href="#home" class="logo" id="logo">
               <img class="logo" src="./imgs/logotec.png" />
             </a>
           </li>
@@ -37,8 +37,8 @@
         </a>
       </section>
       <section id="desc">
-        <h2>MTI</h2>
-        <span>
+        <h2>Características del programa</h2>
+        <p>
           La Maestría en Tecnologías de la Información (MTI) es un posgrado que
           imparte el Instituto Tecnológico de Tepic, y tiene la finalidad de
           profundizar en el campo de conocimiento de las Tecnologías de la
@@ -47,18 +47,19 @@
           necesidades, solución de problemas y aprovechamiento de oportunidades
           que requieran el uso de TI. La MTI está orientada a los profesionales
           con estudios en el área de las Tecnologías de la Información (TI).
-        </span>
-        <h2>
-          Características del programa
-        </h2>
-        <span>
-          Enfoque con orientación profesional. Impartido en colaboración con el
+        </p>
+        <ul><li>Impartido en colaboración con el
           Centro de Investigación Científica y de Educación Superior de Ensenada
-          - Unidad de Transferencia Tecnológica Tepic (CICESE-UT3) Costo de
-          inscripción por semestre $4,500.00 Duración de 4 semestres Cuatro
-          materias básicas Cuatro materias optativas Tres seminarios de tesis
-          Titulación por desarrollo y defensa de tesis
-        </span>
+          - Unidad de Transferencia Tecnológica Tepic (CICESE-UT3).</li>
+        <li>Enfoque con orientación profesional.</li>
+      <li>Costo de
+        inscripción por semestre <strong>$4,500.00</strong></li>
+      <li>Duración de <strong>4 Semestres</strong>></li> <li>Cuatro
+        materias básicas, Cuatro materias optativas, Tres seminarios de tesis,
+        Titulación por desarrollo y defensa de tesis</li></ul>
+        <p>
+              
+        </p>
       </section>
       <section id="syllabus">
         <h2>Retícula</h2>
@@ -70,7 +71,7 @@
 
           <div class="slide-card" id="s1">
             <div class="w3-container">
-              <table class="w3-table-all w3-hoverable">
+              <table class="w3-table-all w3-hoverable" id="topics">
                 <tr>
                   <th colspan="5">Semestre 1</th>
                 </tr>
@@ -110,7 +111,7 @@
 
           <div class="slide-card" id="s2">
             <div class="w3-container">
-              <table class="w3-table-all w3-hoverable">
+              <table class="w3-table-all w3-hoverable" id="topics">
                 <tr>
                   <th colspan="5">Semestre 2</th>
                 </tr>
@@ -150,7 +151,7 @@
 
           <div class="slide-card" id="s3">
             <div class="w3-container">
-              <table class="w3-table-all w3-hoverable">
+              <table class="w3-table-all w3-hoverable" id="topics">
                 <tr>
                   <th colspan="4">Semestre 3</th>
                 </tr>
@@ -186,7 +187,7 @@
 
           <div class="slide-card" id="s4">
             <div class="w3-container">
-              <table class="w3-table-all w3-hoverable">
+              <table class="w3-table-all w3-hoverable" id="topics">
                 <tr>
                   <th colspan="5">Semestre 4</th>
                 </tr>
@@ -221,7 +222,6 @@
       </section>
 
       <section id="profiles">
-        <h2>Perfiles</h2>
         <div class="card">
             <div class="header">
               <h3>Perfil de Ingreso</h3>
