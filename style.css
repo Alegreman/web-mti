@@ -205,6 +205,11 @@ section#desc {
   background: lightgray;
   padding: 1rem;
 }
+#desc img {
+  max-width: 45rem;
+  max-height: 40rem;
+  align-content: right;
+}
 
 section#syllabus {
   background: lightgray;
@@ -495,7 +500,7 @@ section#teachers {
   height: 0;
   padding-bottom: 38%;
   user-select: none;
-  background-color: lightsteelblue;
+  background-color: lightgrey;
   border: solid 10px #616161;
   border-radius: 10px;
 }
