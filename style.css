@@ -146,6 +146,17 @@ nav .logo {
   padding: 0;
 }
 
+#home section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px;
+  width: 100%;
+  height: 100vh;
+  scroll-snap-align: center;
+}
 section {
   display: flex;
   flex-direction: column;
@@ -157,7 +168,7 @@ section {
   height: 90vh;
   scroll-snap-align: center;
 }
-section p {
+#desc section p {
   font-size: 16px;
   align-items: left;
   text-align: left;
@@ -168,8 +179,8 @@ section ul {
   list-style-type: disc;
   margin-top: 1em;
   margin-bottom: 1em;
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: 1em;
+  margin-right: 1em;
   text-align: left;
 }
 section h1 {
@@ -187,45 +198,50 @@ section h2 {
 section#home {
   background: url('./imgs/harrison-moore-A77Y_xYkq6c-unsplash.jpg') no-repeat
     center center/cover;
+  padding: 1rem;
 }
 
 section#desc {
   background: lightgray;
+  padding: 1rem;
 }
 
 section#syllabus {
   background: lightgray;
+  padding: 1rem;
 }
 
 /* profiles flex box*/
 
-.card {
+#profiles .card {
   background-color: #ce9c6f;
   padding: 10px;
   border-radius: 5px;
-  min-height: 300px;
+  min-height: 1rem;
   margin: 13px;
   font-family: sans-serif;
   align-items: baseline;
 }
 
-.img {
+#profiles .img {
   border-radius: 50%;
+  max-width: 12em;
+  max-height: 12em;
 }
-.row {
+#profiles .row {
   display: flex;
   flex-wrap: wrap;
 }
-.column {
+#profiles .column {
   flex: 1;
 }
-.details-container {
-  flex: 2;
+#profiles .details-container {
+  flex: 10;
   font-size: 16px;
   align-content: center;
 }
 
-.avatar-container {
+#profiles .avatar-container {
   flex: 1;
   flex-basis: 250px;
   position: initial;
@@ -233,10 +249,12 @@ section#syllabus {
 
 section#profiles {
   background: lightgray;
+  padding: 1rem;
 }
 
 section#teachers {
   background: lightgray;
+  padding: 1rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -308,40 +326,42 @@ section#teachers {
 }
 
 /* slide cards syllabus*/
-
-.card-container {
+#c1,
+#c2,
+#c3,
+#c4 {
+  display: none;
+}
+#syllabus .syllabus-container {
   margin: 0 auto;
   margin-top: 20px;
-  position: center;
-  width: 40%;
+  position: relative;
+  width: 70%;
   height: 0;
-  margin-bottom: 15px;
-  user-select: inherit;
+  padding-bottom: 20rem;
+  user-select: initial;
   background-color: #1c1c1c;
   border: solid 10px #616161;
   border-radius: 10px;
 }
 
-.card-container .slide-card {
-  display: inherit;
+#syllabus .syllabus-container .slide_crd {
   position: absolute;
   width: 100%;
   height: 100%;
 }
-.card-container .slide-card div,
-table {
-  max-width: 100%;
-  max-height: 100%;
-  margin: 0 auto;
+#syllabus .syllabus-container .slide_crd table {
+  max-width: auto;
+  max-height: auto;
 }
 
-.prev,
-.next {
+#syllabus .prev,
+#syllabus .next {
   width: 12%;
   height: inherit;
   position: absolute;
   top: 0;
-  background-color: rgba(88, 88, 88, 0.2);
+  background-color: rgba(88, 88, 88, 0.1);
   color: rgba(244, 244, 244, 0.9);
   z-index: 99;
   transition: 0.45s;
@@ -349,28 +369,28 @@ table {
   text-align: center;
 }
 
-.next {
+#syllabus .next {
   right: 0;
 }
-.prev {
+#syllabus .prev {
   left: 0;
 }
 
-label span {
+#syllabus label span {
   position: absolute;
   font-size: 100pt;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.prev:hover,
-.next:hover {
+#syllabus .prev:hover,
+#syllabus .next:hover {
   transition: 0.3s;
   background-color: rgba(88, 88, 89, 0.8);
   color: #ffffff;
 }
 
-.card-container #nav_slide {
+#syllabus .syllabus-container #syl_nav_slide {
   width: 100%;
   bottom: 12%;
   height: 11px;
@@ -379,19 +399,9 @@ label span {
   z-index: 99;
   cursor: default;
 }
-table {
-  position: center;
-  float: inline-start;
-  max-width: 450px;
-  max-height: 300px;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  align-content: center;
-}
 
-#nav_slide .dots {
-  top: -4vh;
+#syllabus #syl_nav_slide .dots {
+  top: -5px;
   width: 18px;
   height: 18px;
   margin: 0 4px;
@@ -402,28 +412,28 @@ table {
   transition: 0.4s;
 }
 
-#nav_slide .dots:hover {
+#syllabus #syl_nav_slide .dots:hover {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.9);
   transition: 0.25s;
 }
 
-.slide-card {
+#syllabus .slide_crd {
   z-index: -1;
 }
 
-#t1:checked ~ #s1,
-#t2:checked ~ #s2,
-#t3:checked ~ #s3,
-#t4:checked ~ #s4 {
+#syllabus #c1:checked ~ #one,
+#syllabus #c2:checked ~ #two,
+#syllabus #c3:checked ~ #three,
+#syllabus #c4:checked ~ #four {
   z-index: 9;
   animation: scroll 1s ease-in-out;
 }
 
-#t1:checked ~ #nav_slide #dot1,
-#t2:checked ~ #nav_slide #dot2,
-#t3:checked ~ #nav_slide #dot3,
-#t4:checked ~ #nav_slide #dot4 {
+#syllabus #c1:checked ~ #syl_nav_slide #dot1,
+#syllabus #c2:checked ~ #syl_nav_slide #dot2,
+#syllabus #c3:checked ~ #syl_nav_slide #dot3,
+#syllabus #c4:checked ~ #syl_nav_slide #dot4 {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -435,64 +445,73 @@ table {
     opacity: 1;
   }
 }
-
 @media screen and (max-width: 685px) {
-  .card-container {
+  #syllabus .syllabus-container {
     border: none;
     width: 100%;
     height: 0;
     padding-bottom: 55%;
   }
 
-  label span {
+  #syllabus label span {
     font-size: 50pt;
   }
 
-  .prev,
-  .next {
+  #syllabus .prev,
+  #syllabus .next {
     width: 15%;
   }
-  #nav_slide .dots {
+  #syllabus #syl_nav_slide .dots {
     width: 12px;
     height: 12px;
   }
 }
 @media screen and(min-width: 970px) {
-  .me {
+  #syllabus .me {
     display: none;
   }
 }
 
-/* slide cards teachers*/
+#syllabus table th {
+  align-content: center;
+}
+/*teachers cards*/
+#i1,
+#i2,
+#i3,
+#i4,
+#i5,
+#i6,
+#i7,
+#i8 {
+  display: none;
+}
 
-.card-container {
+#teachers .card-container {
   margin: 0 auto;
   margin-top: 20px;
   position: relative;
   width: 70%;
   height: 0;
   padding-bottom: 38%;
-  user-select: inherit;
-  background-color: #1c1c1c;
+  user-select: none;
+  background-color: lightsteelblue;
   border: solid 10px #616161;
   border-radius: 10px;
 }
 
-.card-container .slide-card {
-  display: inherit;
+#teachers .card-container .slide_img {
   position: absolute;
   width: 100%;
   height: 100%;
 }
-.card-container .slide-card img,
-h5,
-span {
-  width: inherit;
-  height: inherit;
+#teachers .card-container .slide_img img {
+  max-width: 300px;
+  max-height: 250px;
 }
 
-.prev,
-.next {
+#teachers .prev,
+#teachers .next {
   width: 12%;
   height: inherit;
   position: absolute;
@@ -505,28 +524,28 @@ span {
   text-align: center;
 }
 
-.next {
+#teachers .next {
   right: 0;
 }
-.prev {
+#teachers .prev {
   left: 0;
 }
 
-label span {
+#teachers label span {
   position: absolute;
   font-size: 100pt;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.prev:hover,
-.next:hover {
+#teachers .prev:hover,
+#teachers .next:hover {
   transition: 0.3s;
   background-color: rgba(88, 88, 89, 0.8);
   color: #ffffff;
 }
 
-.card-container #nav_slide {
+#teachers .card-container #nav_slide {
   width: 100%;
   bottom: 12%;
   height: 11px;
@@ -535,18 +554,9 @@ label span {
   z-index: 99;
   cursor: default;
 }
-img {
-  position: relative;
-  float: inline-start;
-  max-width: 450px;
-  max-height: 300px;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
-#nav_slide .dots {
-  top: -4vh;
+#teachers #nav_slide .dots {
+  top: -5px;
   width: 18px;
   height: 18px;
   margin: 0 4px;
@@ -557,36 +567,36 @@ img {
   transition: 0.4s;
 }
 
-#nav_slide .dots:hover {
+#teachers #nav_slide .dots:hover {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.9);
   transition: 0.25s;
 }
 
-.slide-card {
+#teachers .slide_img {
   z-index: -1;
 }
 
-#c1:checked ~ #m1,
-#c2:checked ~ #m2,
-#c3:checked ~ #m3,
-#c4:checked ~ #m4,
-#c5:checked ~ #m5,
-#c6:checked ~ #m6,
-#c7:checked ~ #m7,
-#c8:checked ~ #m8 {
+#teachers #i1:checked ~ #one,
+#teachers #i2:checked ~ #two,
+#teachers #i3:checked ~ #three,
+#teachers #i4:checked ~ #four,
+#teachers #i5:checked ~ #five,
+#teachers #i6:checked ~ #six,
+#teachers #i7:checked ~ #seven,
+#teachers #i8:checked ~ #eight {
   z-index: 9;
   animation: scroll 1s ease-in-out;
 }
 
-#c1:checked ~ #nav_slide #dot1,
-#c2:checked ~ #nav_slide #dot2,
-#c3:checked ~ #nav_slide #dot3,
-#c4:checked ~ #nav_slide #dot4,
-#c5:checked ~ #nav_slide #dot5,
-#c6:checked ~ #nav_slide #dot6,
-#c7:checked ~ #nav_slide #dot7,
-#c8:checked ~ #nav_slide #dot8 {
+#teachers #i1:checked ~ #nav_slide #dot1,
+#teachers #i2:checked ~ #nav_slide #dot2,
+#teachers #i3:checked ~ #nav_slide #dot3,
+#teachers #i4:checked ~ #nav_slide #dot4,
+#teachers #i5:checked ~ #nav_slide #dot5,
+#teachers #i6:checked ~ #nav_slide #dot6,
+#teachers #i7:checked ~ #nav_slide #dot7,
+#teachers #i8:checked ~ #nav_slide #dot8 {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -600,28 +610,28 @@ img {
 }
 
 @media screen and (max-width: 685px) {
-  .card-container {
+  #teachers .card-container {
     border: none;
     width: 100%;
     height: 0;
     padding-bottom: 55%;
   }
 
-  label span {
+  #teachers label span {
     font-size: 50pt;
   }
 
-  .prev,
-  .next {
+  #teachers .prev,
+  #teachers .next {
     width: 15%;
   }
-  #nav_slide .dots {
+  #teachers #nav_slide .dots {
     width: 12px;
     height: 12px;
   }
 }
 @media screen and(min-width: 970px) {
-  .me {
+  #teachers .me {
     display: none;
   }
 }
