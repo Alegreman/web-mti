@@ -20,7 +20,7 @@ body {
   border: none;
   color: #ffffff;
   text-align: center;
-  font-size: 28px;
+  font-size: 30px;
   padding: 20px;
   width: 300px;
   transition: all 0.2s;
@@ -57,8 +57,8 @@ body {
   width: 100%;
   height: 100%;
   overflow-y: scroll;
-  /*scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;*/
+  scroll-behavior: smooth;
+  /*  scroll-snap-type: y mandatory;*/
   text-align: start;
 }
 /* css smooth scroll*/
@@ -83,6 +83,20 @@ nav a:hover {
   font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
+}
+#desc p {
+  padding: 20px;
+  text-align: justify;
+}
+#desc ul {
+  padding: 20px;
+  text-align: justify;
+}
+
+.dcontainer {
+  margin: 0 auto;
+  width: 70%;
+  text-align: justify;
 }
 
 #topics td,
@@ -200,10 +214,14 @@ section#home {
     center center/cover;
   padding: 1rem;
 }
+#home h1 {
+  text-align: center;
+}
 
 section#desc {
   background: lightgray;
   padding: 1rem;
+  margin: 0 auto;
 }
 #desc img {
   max-width: 45rem;
@@ -221,19 +239,27 @@ section#syllabus {
 
 #profiles .card {
   background-color: #ce9c6f;
-  padding: 5px;
+  padding: 1rem;
   border-radius: 5px;
   min-height: 1rem;
-  margin: 13px;
+  margin-left: 7rem;
+  margin-right: 7rem;
+  margin-top: 2em;
+  margin-bottom: 2em;
   font-family: sans-serif;
   align-items: baseline;
-  position: center;
+  text-align: justify;
+}
+#profiles h3 {
+  text-align: center;
+  font-weight: bold;
 }
 
-#profiles .img {
+#profiles img {
   border-radius: 50%;
   max-width: 12em;
   max-height: 12em;
+  align-items: left;
 }
 #profiles .row {
   display: flex;
