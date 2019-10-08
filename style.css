@@ -170,8 +170,8 @@ section {
 }
 #desc section p {
   font-size: 16px;
-  align-items: left;
-  text-align: left;
+  align-items: center;
+  text-align: center;
   padding: 5px;
 }
 section ul {
@@ -208,7 +208,8 @@ section#desc {
 #desc img {
   max-width: 45rem;
   max-height: 40rem;
-  align-content: right;
+  align-content: center;
+  display: none;
 }
 
 section#syllabus {
