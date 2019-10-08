@@ -11,6 +11,7 @@ body {
   line-height: 1.6;
   height: 100vh;
   overflow: hidden;
+  position: relative;
 }
 
 .button {
@@ -220,7 +221,7 @@ section#home {
 
 section#desc {
   background: lightgray;
-  padding: 1rem;
+  padding: 10rem;
   margin: 0 auto;
 }
 #desc img {
@@ -232,7 +233,7 @@ section#desc {
 
 section#syllabus {
   background: lightgray;
-  padding: 1rem;
+  padding: 10rem;
 }
 
 /* profiles flex box*/
@@ -244,11 +245,11 @@ section#syllabus {
   min-height: 1rem;
   margin-left: 7rem;
   margin-right: 7rem;
-  margin-top: 2em;
   margin-bottom: 2em;
   font-family: sans-serif;
   align-items: baseline;
   text-align: justify;
+  position: relative;
 }
 #profiles h3 {
   text-align: center;
@@ -282,12 +283,13 @@ section#syllabus {
 
 section#profiles {
   background: lightgray;
-  padding: 1rem;
+  padding: 10rem;
 }
 
 section#teachers {
   background: lightgray;
-  padding: 1rem;
+  padding: 10rem;
+  margin-top: 5em;
 }
 
 @media screen and (max-width: 768px) {
@@ -376,6 +378,9 @@ section#teachers {
   background-color: #1c1c1c;
   border: solid 10px #616161;
   border-radius: 10px;
+}
+#topics th {
+  text-align: center;
 }
 
 #syllabus .syllabus-container .slide_crd {
