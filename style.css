@@ -205,6 +205,11 @@ section#desc {
   background: lightgray;
   padding: 1rem;
 }
+#desc img {
+  max-width: 45rem;
+  max-height: 40rem;
+  align-content: right;
+}
 
 section#syllabus {
   background: lightgray;
