@@ -86,11 +86,11 @@ nav a:hover {
   width: 100%;
 }
 #desc p {
-  padding: 20px;
+  padding: 1rem;
   text-align: justify;
 }
 #desc ul {
-  padding: 20px;
+  padding: 1rem;
   text-align: justify;
 }
 
@@ -180,14 +180,13 @@ section {
   text-align: center;
   padding: 50px;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   scroll-snap-align: center;
 }
 #desc section p {
   font-size: 16px;
   align-items: center;
   text-align: center;
-  padding: 5px;
 }
 section ul {
   display: block;
@@ -221,7 +220,7 @@ section#home {
 
 section#desc {
   background: lightgray;
-  padding: 10rem;
+  padding: 3rem;
   margin: 0 auto;
 }
 #desc img {
@@ -233,7 +232,7 @@ section#desc {
 
 section#syllabus {
   background: lightgray;
-  padding: 10rem;
+  padding: 3rem;
 }
 
 /* profiles flex box*/
@@ -288,8 +287,7 @@ section#profiles {
 
 section#teachers {
   background: lightgray;
-  padding: 10rem;
-  margin-top: 5em;
+  padding: 5rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -360,24 +358,31 @@ section#teachers {
   }
 }
 
-/* slide cards syllabus*/
-#c1,
-#c2,
-#c3,
-#c4 {
-  display: none;
+@media only screen and (max-height: 970px) {
+  #syllabus #topics {
+    max-height: 70%;
+    max-width: 70%;
+  }
 }
+
+/* slide cards syllabus*/
+
 #syllabus .syllabus-container {
-  margin: 0 auto;
-  margin-top: 20px;
+  margin: auto;
   position: relative;
   width: 70%;
-  height: 0;
-  padding-bottom: 20rem;
+  max-width: 100%;
+  height: 25rem;
+  max-height: 40rem;
   user-select: initial;
   background-color: #1c1c1c;
   border: solid 10px #616161;
   border-radius: 10px;
+  z-index: 0;
+}
+#topics {
+  max-height: 100%;
+  max-width: 100%;
 }
 #topics th {
   text-align: center;
