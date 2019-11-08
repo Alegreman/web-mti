@@ -237,7 +237,7 @@ section#syllabus {
 
 #init-profile .card {
   background-color: #ce9c6f;
-  padding: 1rem;
+  padding: 1rem 1rem;
   border-radius: 5px;
   min-height: 1rem;
   margin-left: 7rem;
@@ -280,7 +280,7 @@ section#syllabus {
 
 section#init-profile {
   background: lightgray;
-  padding: 5rem auto;
+  padding: 5rem 2rem;
 }
 
 /* profiles flex box*/
