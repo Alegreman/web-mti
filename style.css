@@ -1,5 +1,5 @@
 * {
-  margin: 0;
+  margin: auto;
   padding: 0;
   font-size: 16px;
 }
@@ -83,7 +83,6 @@ nav a:hover {
 #topics {
   font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 100%;
 }
 #desc p {
   padding: 1rem;
@@ -131,7 +130,7 @@ nav a:hover {
   height: 100%;
   justify-content: space-around;
   align-items: center;
-  margin-left: auto;
+  margin-left: 1;
 }
 .nav-links li a {
   color: white;
@@ -168,6 +167,7 @@ nav .logo {
   justify-content: center;
   text-align: center;
   padding: 50px;
+  margin: 2rem;
   width: 100%;
   height: 100vh;
   scroll-snap-align: center;
@@ -178,7 +178,6 @@ section {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 50px;
   width: 100%;
   height: 100vh;
   scroll-snap-align: center;
@@ -220,8 +219,6 @@ section#home {
 
 section#desc {
   background: lightgray;
-  padding: 3rem;
-  margin: 0 auto;
 }
 #desc img {
   max-width: 45rem;
@@ -233,11 +230,12 @@ section#desc {
 section#syllabus {
   background: lightgray;
   padding: 3rem;
+  margin: 0 auto;
 }
 
 /* profiles flex box*/
 
-#profiles .card {
+#init-profile .card {
   background-color: #ce9c6f;
   padding: 1rem;
   border-radius: 5px;
@@ -250,39 +248,95 @@ section#syllabus {
   text-align: justify;
   position: relative;
 }
-#profiles h3 {
+#init-profile h3 {
   text-align: center;
   font-weight: bold;
 }
 
-#profiles img {
+#init-profile img {
   border-radius: 50%;
   max-width: 12em;
   max-height: 12em;
   align-items: left;
 }
-#profiles .row {
+#init-profile .row {
   display: flex;
   flex-wrap: wrap;
 }
-#profiles .column {
+#init-profile .column {
   flex: 1;
 }
-#profiles .details-container {
+#init-profile .details-container {
   flex: 10;
   font-size: 16px;
   align-content: center;
 }
 
-#profiles .avatar-container {
+#init-profile .avatar-container {
   flex: 1;
   flex-basis: 250px;
   position: initial;
 }
 
-section#profiles {
+section#init-profile {
   background: lightgray;
-  padding: 10rem;
+  padding: 5rem auto;
+}
+
+/* profiles flex box*/
+
+#grad-profile .card {
+  background-color: #ce9c6f;
+  padding: 1rem;
+  border-radius: 5px;
+  min-height: 1rem;
+  margin-left: 7rem;
+  margin-right: 7rem;
+  margin-bottom: 2em;
+  font-family: sans-serif;
+  align-items: baseline;
+  text-align: justify;
+  position: relative;
+}
+#grad-profile h3 {
+  text-align: center;
+  font-weight: bold;
+}
+
+#grad-profile img {
+  border-radius: 50%;
+  max-width: 12em;
+  max-height: 12em;
+  align-items: left;
+}
+#grad-profile .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+#grad-profile .column {
+  flex: 1;
+}
+#grad-profile .details-container {
+  flex: 10;
+  font-size: 16px;
+  align-content: center;
+}
+
+#grad-profile .avatar-container {
+  flex: 1;
+  flex-basis: 250px;
+  position: initial;
+}
+
+section#grad-profile {
+  background: lightgray;
+  padding: 2rem;
+}
+@media only screen and (max-height: 1024px) {
+  #init-profile #grad-profile {
+    height: 70%;
+    width: 70%;
+  }
 }
 
 section#teachers {
@@ -313,12 +367,12 @@ section#teachers {
     position: fixed;
     background: #f58220;
     height: 100vh;
-    width: 100%;
+    width: 60%;
     flex-direction: column;
     clip-path: circle(100px at 90% -10%);
     -webkit-clip-path: circle(100px at 90% -10%);
     transition: all 1s ease-out;
-    pointer-events: none;
+    pointer-events: all;
   }
 
   .nav-links.open {
@@ -358,13 +412,6 @@ section#teachers {
   }
 }
 
-@media only screen and (max-height: 970px) {
-  #syllabus #topics {
-    max-height: 70%;
-    max-width: 70%;
-  }
-}
-
 /* slide cards syllabus*/
 
 #syllabus .syllabus-container {
@@ -379,11 +426,10 @@ section#teachers {
   border: solid 10px #616161;
   border-radius: 10px;
   z-index: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
 }
-#topics {
-  max-height: 100%;
-  max-width: 100%;
-}
+
 #topics th {
   text-align: center;
 }
@@ -394,8 +440,8 @@ section#teachers {
   height: 100%;
 }
 #syllabus .syllabus-container .slide_crd table {
-  max-width: auto;
-  max-height: auto;
+  width: inherit - 100px;
+  height: inherit;
 }
 
 #syllabus .prev,
@@ -444,7 +490,7 @@ section#teachers {
 }
 
 #syllabus #syl_nav_slide .dots {
-  top: -5px;
+  top: 2rem;
   width: 18px;
   height: 18px;
   margin: 0 4px;
@@ -457,12 +503,18 @@ section#teachers {
 
 #syllabus #syl_nav_slide .dots:hover {
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(24, 21, 202, 0.9);
   transition: 0.25s;
 }
 
 #syllabus .slide_crd {
   z-index: -1;
+}
+#c1,
+#c2,
+#c3,
+#c4 {
+  display: none;
 }
 
 #syllabus #c1:checked ~ #one,
@@ -477,7 +529,7 @@ section#teachers {
 #syllabus #c2:checked ~ #syl_nav_slide #dot2,
 #syllabus #c3:checked ~ #syl_nav_slide #dot3,
 #syllabus #c4:checked ~ #syl_nav_slide #dot4 {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 @keyframes scroll {
@@ -488,7 +540,7 @@ section#teachers {
     opacity: 1;
   }
 }
-@media screen and (max-width: 685px) {
+@media screen and (max-width: 1024px) {
   #syllabus .syllabus-container {
     border: none;
     width: 70%;
@@ -509,7 +561,7 @@ section#teachers {
     height: 12px;
   }
 }
-@media screen and(min-width: 970px) {
+@media screen and(min-width: 1024px) {
   #syllabus .me {
     display: none;
   }
@@ -541,6 +593,8 @@ section#teachers {
   background-color: lightgrey;
   border: solid 10px #616161;
   border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
 }
 
 #teachers .card-container .slide_img {
@@ -599,7 +653,7 @@ section#teachers {
 }
 
 #teachers #nav_slide .dots {
-  top: -5px;
+  top: 2rem;
   width: 18px;
   height: 18px;
   margin: 0 4px;
@@ -652,7 +706,7 @@ section#teachers {
   }
 }
 
-@media screen and (max-width: 685px) {
+@media screen and (max-width: 1024px) {
   #teachers .card-container {
     border: none;
     width: 100%;
